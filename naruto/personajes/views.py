@@ -23,9 +23,9 @@ def personaje_form(request):
             form.save()
             context["mensaje"] = "Se guardó el form"
             return redirect("pj:personajes")
-    else:
-        context["mensaje"] = "No se guardo el form"
-        context["form"] = form
+        else:
+            context["mensaje"] = "No se guardo el form"
+            context["form"] = form
 
     return render(request, "carga_persona.html", context)
 
